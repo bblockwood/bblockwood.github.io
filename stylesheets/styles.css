@@ -263,6 +263,21 @@ footer {
   a:hover {
     color: #81d4fa;
   }
+
+  /* Fix navigation text and separators visibility in dark mode */
+  nav h3 {
+    color: #e0e0e0;
+  }
+
+  /* Fix bold text visibility in dark mode */
+  strong {
+    color: #e0e0e0;
+  }
+
+  /* Fix header separator line visibility in dark mode */
+  header::after {
+    background-color: #404040;
+  }
 }
 
 
@@ -328,6 +343,17 @@ footer {
 
   nav h3 a b {
     font-weight: 700;
+  }
+
+  /* Dark mode for medium screens */
+  @media (prefers-color-scheme: dark) {
+    section {
+      border-color: #404040;
+    }
+
+    nav h3 {
+      color: #e0e0e0;
+    }
   }
 }
 
@@ -427,6 +453,13 @@ footer {
 
   p, ul, ol, table, pre, dl {
     margin-bottom: 20px;
+  }
+
+  /* Dark mode for mobile screens */
+  @media (prefers-color-scheme: dark) {
+    nav h3 {
+      color: #e0e0e0;
+    }
   }
 }
 
