@@ -130,8 +130,11 @@ header {
   border: 1px solid var(--color-border);
 }
 
-section {
+main {
   grid-area: main;
+}
+
+section {
   padding: var(--space-lg);
   background: var(--color-bg);
   border-radius: 8px;
