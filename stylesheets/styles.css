@@ -24,6 +24,7 @@ h1, h2, h3 {
 
 h1 {
   font-size:28px;
+  padding-top: 15px;
 }
 
 h2 {
@@ -51,8 +52,10 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  max-width:1200px;
+  width:90%;
   margin:0 auto;
+  position: relative;
 }
 
 blockquote {
@@ -104,6 +107,20 @@ header {
   width:270px;
   float:left;
   position:fixed;
+}
+
+header h1 {
+  padding-top: 0;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 1px;
+  height: 100%;
+  background-color: #e5e5e5;
 }
 
 header ul {
@@ -165,7 +182,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:calc(100% - 320px);
   float:right;
   padding-bottom:50px;
 }
@@ -223,6 +240,10 @@ footer {
 
   header {
     padding-right:320px;
+  }
+
+  header::after {
+    display: none;
   }
 
   section {
@@ -291,4 +312,5 @@ pre {
 
 .profile-photo {
   border: 1px solid darkgray;
+  border-radius: 8px;
 }
