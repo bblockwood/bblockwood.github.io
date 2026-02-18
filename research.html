@@ -20,6 +20,53 @@
       ga('create', 'UA-65546321-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <style>
+      .paper-abstract {
+        margin-top: 0;
+      }
+
+      .paper-abstract-toggle {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+        font-size: 0.92em;
+        font-weight: 700;
+        color: #6a737d;
+        width: auto;
+      }
+
+      .paper-abstract-toggle::before {
+        content: "+";
+        display: inline-block;
+        width: 14px;
+        margin-right: 4px;
+      }
+
+      .paper-abstract.is-open .paper-abstract-toggle::before {
+        content: "-";
+      }
+
+      .abstract-content {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 240ms ease, opacity 180ms ease;
+      }
+
+      .paper-abstract.is-open .abstract-content {
+        opacity: 1;
+      }
+
+      .abstract-content p {
+        margin: 6px 0 0 0;
+        font-size: 0.95em;
+        color: #4a4a4a;
+        line-height: 1.55;
+      }
+    </style>
   </head>
 <body>
 <div class="wrapper">
@@ -47,32 +94,32 @@
 
 	<h1>Research Publications</h1>
 
-      <p><b><a href="papers/Lockwood_Allcott_Taubinsky_Sial_2024_RES_Lotteries.pdf">What Drives Demand for State-Run Lotteries? Evidence and Welfare Implications</a></b><br>
+      <p class="paper-entry" data-abstract="We use natural experiments embedded in state-run lotteries and a new nationally representative survey to provide reduced-form and structural estimates of risk preferences and behavioral biases in lottery demand, and to explore the implications for optimal lottery design. We find that sales respond more to the expected value of the jackpot than to price and are unresponsive to variation in the second prize, a pattern consistent with probability weighting. Survey evidence suggests Americans would spend substantially less on lotteries if unbiased, and calibrated welfare analysis implies current multi-state lottery designs increase welfare overall but may harm heavy spenders."><b><a href="papers/Lockwood_Allcott_Taubinsky_Sial_2024_RES_Lotteries.pdf">What Drives Demand for State-Run Lotteries? Evidence and Welfare Implications</a></b><br>
         with Hunt Allcott, Dmitry Taubinsky, and Afras Sial<br>
         <i><b>Review of Economic Studies</b></i>, 2025, 92(4), pp. 2578-2623.<br>
         Coverage: <a href="https://knowledge.wharton.upenn.edu/article/why-do-people-play-the-lottery/">Knowledge at Wharton</a><br>
         <!-- [<a href="https://doi.org/10.1093/restud/rdae086">Journal webpage</a>] -->
         </p>
 
-        <p><b><a href="papers/Ferey_Lockwood_Taubinsky_Sufficient_Statistics_for_Nonlinear_Taxes.pdf">Sufficient Statistics for Nonlinear Tax Systems with General Across-Income Heterogeneity</a></b><br>
+        <p class="paper-entry" data-abstract="This paper provides empirically implementable sufficient-statistics formulas for optimal nonlinear tax systems in the presence of across-income heterogeneity in preferences, inheritances, income-shifting capabilities, and related sources. We characterize optimal smooth tax systems on income and savings as well as simpler tax systems. The formulas combine familiar elasticity concepts with a novel sufficient statistic for heterogeneity correlated with earnings ability, and an application to the United States implies an optimal savings tax that is mostly positive and progressive."><b><a href="papers/Ferey_Lockwood_Taubinsky_Sufficient_Statistics_for_Nonlinear_Taxes.pdf">Sufficient Statistics for Nonlinear Tax Systems with General Across-Income Heterogeneity</a></b><br>
           with Antoine Ferey and Dmitry Taubinsky<br>
           <i><b>American Economic Review</b></i>, 2024, 114(10), pp. 3206–3249.<br>
         </p>
   
-        <p><b><a href="papers/Lockwood_Sial_Weinzierl_2021.pdf">Designing, Not Checking, for Policy Robustness: An Example with Optimal Taxation</a></b><br>
+        <p class="paper-entry" data-abstract="We modify the standard optimal income tax model to incorporate policymakers' uncertainty over key parameter values and define robust policy as the one that maximizes expected social welfare. Calibrating uncertainty about taxable-income elasticity using past empirical work and survey evidence on economists' beliefs, we compare robust tax rates to policies based on point estimates. The robust optimum is typically more progressive, raising top marginal rates by roughly 5 to 7 percentage points and generating modest expected welfare gains."><b><a href="papers/Lockwood_Sial_Weinzierl_2021.pdf">Designing, Not Checking, for Policy Robustness: An Example with Optimal Taxation</a></b><br>
         with Afras Sial and Matthew Weinzierl<br>
         <i><b>Tax Policy and the Economy</b></i>, 2021, 35, pp. 1-54.<br>
         <!-- [<a href="https://www.journals.uchicago.edu/doi/10.1086/713492">Journal webpage</a>]
         [<a href="https://www.nber.org/papers/w28098">NBER version</a>] -->
       </p>
 
-      <p><b><a href="papers/Lockwood_2020_IncomeTaxationWithPresentBias.pdf">Optimal Income Taxation with Present Bias</a></b><br>
+      <p class="paper-entry" data-abstract="Work often entails up-front effort costs in exchange for delayed benefits, and mounting evidence documents present bias over effort in the face of such delays. This paper studies implications for optimal income taxation when present-biased workers choose multiple dimensions of labor effort, some occurring before compensation. Present bias lowers optimal tax rates, with larger effects when taxable-income elasticity is high, and can imply negative optimal marginal rates at low incomes as a corrective rationale for work subsidies such as the Earned Income Tax Credit."><b><a href="papers/Lockwood_2020_IncomeTaxationWithPresentBias.pdf">Optimal Income Taxation with Present Bias</a></b><br>
 	        <i><b>American Economic Journal: Economic Policy</b></i>, 2020, 12(4), pp. 298-327.<br>
           <!-- [<a href="https://www.aeaweb.org/articles?id=10.1257/pol.20180762">Journal webpage</a>]
           [<a href="papers/Lockwood_2020_Appendix.pdf">Appendix</a>] -->
         </p>
 
-    	<p><b><a href="papers/Allcott_Lockwood_Taubinsky_RegressiveSinTaxes.pdf">Regressive Sin Taxes, with an Application to the Optimal Soda Tax</a></b><br>
+    	<p class="paper-entry" data-abstract="This paper studies the interaction between corrective and redistributive motives in a general optimal-tax framework and derives empirically implementable sufficient statistics for optimal commodity taxes. The optimal sin tax rises with demand elasticity and with the extent to which lower-income consumers are more biased or more tax-responsive, but falls when consumption is concentrated among the poor or when income effects imply added labor-supply distortions. Applied to sugar-sweetened beverages, the estimates imply a substantial positive optimal nationwide tax, with lower optimal rates at the city level because of cross-border shopping."><b><a href="papers/Allcott_Lockwood_Taubinsky_RegressiveSinTaxes.pdf">Regressive Sin Taxes, with an Application to the Optimal Soda Tax</a></b><br>
           with Hunt Allcott and Dmitry Taubinsky<br>
           <i><b>Quarterly Journal of Economics</b></i>, 2019, 134(3), pp. 1557–1626.<br>
           <!-- [<a href="https://academic.oup.com/qje/advance-article/doi/10.1093/qje/qjz017/5499049?guestAccessKey=d4d4dd8b-2aec-4ebf-a77c-8fd8389d1599">Journal webpage</a>]
@@ -80,7 +127,7 @@
           News coverage: <a href="https://www.economist.com/finance-and-economics/2019/05/23/how-to-tax-sugary-drinks">The Economist</a>, <a href="https://www.inquirer.com/news/soda-tax-federal-economist-cost-benefit-20190520.html">Philadelphia Inquirer</a>
         </p>
 
-      <p><b><a href="papers/Grummon_Lockwood_Taubinsky_Allcott_2019_DesigningBetterSugaryDrinkTaxes.pdf">Designing Better Sugary Drink Taxes</a></b><br>
+      <p class="paper-entry" data-abstract="Taxes on sugar-sweetened beverages (SSBs), such as soda and bottled iced tea, are an increasingly popular approach to reducing obesity, diabetes, and other health harms. A basic economic principle is that such corrective taxes should be proportional to the harm caused. The harm from sugary drinks comes from the sugar, and SSBs vary substantially in sugar per unit volume. Yet SSB taxes typically set constant rates per unit volume. We estimate that a simple design change-taxing the amount of sugar in a drink, not the volume of liquid that accompanies the sugar-could boost a SSB tax's health benefits and overall economic gains by roughly 30%."><b><a href="papers/Grummon_Lockwood_Taubinsky_Allcott_2019_DesigningBetterSugaryDrinkTaxes.pdf">Designing Better Sugary Drink Taxes</a></b><br>
         with Anna H. Grummon, Dmitry Taubinsky and Hunt Allcott<br>
         <i><b>Science</b></i>, 2019, 365(6457), pp. 989-900.<br>
         <!-- [<a href="https://science.sciencemag.org/content/365/6457/989">Journal webpage</a>]
@@ -88,21 +135,21 @@
         News coverage: <a href="https://www.aaas.org/news/experts-say-tax-sugar-not-size-drinks-healthier-outcomes">AAAS</a>, <a href="https://www.inverse.com/article/59035-how-to-make-soda-taxes-better">Inverse</a>, <a href="https://www.sciencedaily.com/releases/2019/09/190905145434.htm">ScienceDaily</a>
       </p>
 
-      <p><b><a href="papers/Allcott_Lockwood_Taubinsky_SodaTaxesJEP.pdf">Should We Tax Sugar-Sweetened Beverages? An Overview of Theory and Evidence</a></b><br>
+      <p class="paper-entry" data-abstract="This article provides an economic framework for evaluating taxes on sugar-sweetened beverages. It reviews consumption patterns and health harms, presents principles for determining optimal tax levels including externalities, internalities, elasticities, distribution, and producer incidence, and summarizes the related empirical evidence. The paper concludes with concrete policy recommendations on tax base design, scope, and implementation."><b><a href="papers/Allcott_Lockwood_Taubinsky_SodaTaxesJEP.pdf">Should We Tax Sugar-Sweetened Beverages? An Overview of Theory and Evidence</a></b><br>
         with Hunt Allcott and Dmitry Taubinsky<br>
         <i><b>Journal of Economic Perspectives</b></i>, 2019, 33(3), pp. 202-227.<br>
         <!-- [<a href="https://www.aeaweb.org/articles?id=10.1257/jep.33.3.202">Journal webpage</a>]
         [<a href="https://www.nber.org/papers/w25842">NBER version</a>] -->
       </p>
 
-      <p><b><a href="papers/Allcott_Lockwood_Taubinsky_2018_RamseyStrikesBack.pdf">Ramsey Strikes Back: Optimal Commodity Taxes and Redistribution in the Presence of Salience Effects</a></b><br>
+      <p class="paper-entry" data-abstract="This paper relaxes the full-salience assumption that underlies the Atkinson-Stiglitz result and studies optimal commodity taxation when taxes are not fully salient during income-determining decisions. Under imperfect salience, differential commodity taxes can improve welfare even in settings where standard theory would recommend relying only on income taxation."><b><a href="papers/Allcott_Lockwood_Taubinsky_2018_RamseyStrikesBack.pdf">Ramsey Strikes Back: Optimal Commodity Taxes and Redistribution in the Presence of Salience Effects</a></b><br>
         with Hunt Allcott and Dmitry Taubinsky<br>
         <i><b>American Economic Association Papers and Proceedings</b></i>, 2018, 108, pp. 88-92.<br>
         <!-- [<a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20181040">Journal webpage</a>]
         [<a href="https://www.nber.org/papers/w24233">NBER version with appendix</a>] -->
       </p>
 
-      <p><b><a href="papers/Lockwood_Nathanson_Weyl_2017_AllocationOfTalent.pdf">Taxation and the Allocation of Talent</a></b><br>
+      <p class="paper-entry" data-abstract="Taxation affects the allocation of talented individuals across professions by blunting material incentives and magnifying nonpecuniary incentives of pursuing a calling. Estimates from the literature suggest high-paying professions tend to have more negative externalities while lower-paying professions have more positive externalities. A calibrated model implies negative marginal tax rates on some middle-class incomes and positive rates on the rich, with much larger potential gains from profession-specific taxes and subsidies than from a profession-general nonlinear income tax."><b><a href="papers/Lockwood_Nathanson_Weyl_2017_AllocationOfTalent.pdf">Taxation and the Allocation of Talent</a></b><br>
         with Charles Nathanson and E. Glen Weyl<br>
         <i><b>Journal of Political Economy</b></i>, 2017, 125(5), pp. 1635-1682.<br>
         <!-- [<a href="https://www.journals.uchicago.edu/doi/10.1086/693393">Journal webpage</a>]
@@ -111,7 +158,7 @@
         News coverage: <a href="https://www.vox.com/2014/4/20/5629904/study-tax-hikes-could-grow-the-economy">Vox</a>, <a href="https://marginalrevolution.com/marginalrevolution/2014/04/taxation-and-the-distorted-allocation-of-talent.html">Marginal Revolution</a>
       </p>
 
-      <p><b><a href="papers/Lockwood_Weinzierl_2016_PositiveNormativeJudgments.pdf">Positive and Normative Judgments Implicit in U.S. Tax Policy, and the Costs of Unequal Growth and Recessions</a></b><br>
+      <p class="paper-entry" data-abstract="This paper studies what combinations of positive and normative judgments are implicit in U.S. tax policy using an inverse-optimum approach from 1979 through 2010. The inferred results imply a trilemma: either inferred judgments have limited normative relevance, perceived distortionary costs of taxation are outside conventional ranges, or conventional assumptions about social welfare weights are violated. The analysis shows these interpretation issues matter quantitatively for welfare calculations of unequal growth and recessions."><b><a href="papers/Lockwood_Weinzierl_2016_PositiveNormativeJudgments.pdf">Positive and Normative Judgments Implicit in U.S. Tax Policy, and the Costs of Unequal Growth and Recessions</a></b><br>
         with Matthew Weinzierl<br>
         <i><b>Journal of Monetary Economics</b></i>, 2016, 77, pp. 30-47.<br>
         <!-- [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0304393215001257">Journal webpage</a>]
@@ -119,14 +166,14 @@
         [<a href="papers/Lockwood_Weinzierl_2016_Appendix.pdf">Appendix</a>] -->
       </p>
 
-      <p><b><a href="papers/Lockwood_Weinzierl_2015_DeGustibusNonEstTaxandum.pdf">De Gustibus Non Est Taxandum: Heterogeneity in Preferences and Optimal Redistribution</a></b><br>
+      <p class="paper-entry" data-abstract="The paper formalizes the intuition that preference heterogeneity can reduce redistribution in a standard optimal-tax model. Under a plausible condition that preferences for consumption relative to leisure rise with income, optimal marginal tax rates are lower. The authors also derive a simple sufficient statistic linking preference heterogeneity to marginal tax rates and provide calibrated and suggestive empirical evidence on quantitative policy implications."><b><a href="papers/Lockwood_Weinzierl_2015_DeGustibusNonEstTaxandum.pdf">De Gustibus Non Est Taxandum: Heterogeneity in Preferences and Optimal Redistribution</a></b><br>
         with Matthew Weinzierl<br>
         <i><b>Journal of Public Economics</b></i>, 2015, 124, pp. 74-80.<br>
         <!-- [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0047272715000134">Journal webpage</a>]
         [<a href="papers/Lockwood_Weinzierl_2015_Appendix.pdf">Pre-press version with appendix</a>] -->
       </p>
 
-      <p><b><a href="papers/Rockoff_Lockwood_2010_StuckInTheMiddle.pdf">Stuck in the Middle: Impacts of Grade Configuration in Public Schools</a></b><br>
+      <p class="paper-entry" data-abstract="We examine the effects of separating grade levels across schools and find that moving students from elementary to middle school in grade 6 or 7 causes significant achievement declines of about 0.15 standard deviations in math and English. Effects persist through grade 8 and are larger for students with lower initial achievement. Using instrumented middle-school attendance and student fixed effects, the results suggest these transitions are unlikely to be cost-effective."><b><a href="papers/Rockoff_Lockwood_2010_StuckInTheMiddle.pdf">Stuck in the Middle: Impacts of Grade Configuration in Public Schools</a></b><br>
         with Jonah Rockoff<br>
         <i><b>Journal of Public Economics</b></i>, 2010, 94(11-12), pp. 1051-1061.<br>
         <!-- [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0047272710000824">Journal webpage</a>]
@@ -135,16 +182,16 @@
 
 	  <h1>Working Papers</h1>
         
-        <p><b><a href="papers/Anagol_Davids_Lockwood_Ramadorai_Diffuse_Bunching_with_Frictions.pdf">Diffuse Bunching with Frictions: Theory and Estimation</a></b><br>
+        <p class="paper-entry" data-abstract="We incorporate a general model of frictions into the bunching-based elasticity estimator. The estimator replaces bunching-window bounds with a lumpiness parameter, uses fewer parameters than the conventional approach, and delivers additional interpretable quantities such as friction size and unobserved adjustment costs. Applied to canonical settings including the U.S. EITC kink and South African administrative tax data, the approach captures diffuse bunching patterns and yields new evidence on VAT compliance costs and kink misperceptions."><b><a href="papers/Anagol_Davids_Lockwood_Ramadorai_Diffuse_Bunching_with_Frictions.pdf">Diffuse Bunching with Frictions: Theory and Estimation</a></b><br>
           with Santosh Anagol, Allan Davids, and Tarun Ramadorai<br>
           <a href="https://github.com/bblockwood/DiffuseBunching">Computation package for the diffuse bunching estimator</a><br>
         </p>
 
-        <p><b><a href="papers/Anagol_Balasubramaniam_Lockwood_Ramadorai_Uettwiller_Optimal_Tax_Policy_with_Misreporting.pdf">Optimal Tax Policy with Misreporting: Theory, and Evidence from Real Estate</a></b><br>
+        <p class="paper-entry" data-abstract="We develop a model of optimal taxation and enforcement when policymakers value both welfare maximization and tax accuracy, where taxpayers remit statutorily owed tax under truthful reporting. The framework characterizes the joint optimum over tax rates and enforcement stringency and is applied to the Mumbai real-estate market using bunching evidence and third-party value estimates. Structural estimates imply meaningful under-reporting and quantify a strong policy preference for avoiding taxpayer overpayments relative to strict revenue collection."><b><a href="papers/Anagol_Balasubramaniam_Lockwood_Ramadorai_Uettwiller_Optimal_Tax_Policy_with_Misreporting.pdf">Optimal Tax Policy with Misreporting: Theory, and Evidence from Real Estate</a></b><br>
           with Santosh Anagol, Vimal Balasubramaniam, Tarun Ramadorai, and Antoine Uettwiller<br>
         </p>
 
-        <p><b>Optimal Shared Micromobility Taxes with
+        <p class="paper-entry"><b>Optimal Shared Micromobility Taxes with
 Distributional Concerns</b><br>
 		(draft coming soon)<br>
           with Peter Lugthart and Arthur A. van Benthem<br>
@@ -170,6 +217,65 @@ Distributional Concerns</b><br>
 
 	</section>
     </div>
+	<script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var entries = document.querySelectorAll('.paper-entry');
+
+        entries.forEach(function (entry) {
+          var wrapper = document.createElement('div');
+          wrapper.className = 'paper-abstract';
+
+          var toggle = document.createElement('button');
+          toggle.type = 'button';
+          toggle.className = 'paper-abstract-toggle';
+          toggle.textContent = 'Abstract';
+          toggle.setAttribute('aria-expanded', 'false');
+
+          var content = document.createElement('div');
+          content.className = 'abstract-content';
+
+          var abstractText = (entry.dataset.abstract || '').trim();
+          if (!abstractText) {
+            return;
+          }
+
+          var text = document.createElement('p');
+          text.textContent = abstractText;
+
+          content.appendChild(text);
+          wrapper.appendChild(toggle);
+          wrapper.appendChild(content);
+          entry.appendChild(wrapper);
+
+          toggle.addEventListener('click', function () {
+            var isOpen = wrapper.classList.contains('is-open');
+
+            if (isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              requestAnimationFrame(function () {
+                wrapper.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                content.style.maxHeight = '0px';
+              });
+              return;
+            }
+
+            wrapper.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            content.style.maxHeight = content.scrollHeight + 'px';
+          });
+
+          content.addEventListener('transitionend', function (event) {
+            if (event.propertyName !== 'max-height') {
+              return;
+            }
+            if (wrapper.classList.contains('is-open')) {
+              content.style.maxHeight = 'none';
+            }
+          });
+        });
+      });
+    </script>
 	<script src="javascripts/scale.fix.js"></script>
 	</body>
 </html>
