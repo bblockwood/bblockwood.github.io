@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Benjamin Lockwood</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65546321-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <style>
+      .app-head { display: flex; align-items: center; gap: 18px; margin: 0 0 20px; }
+      .app-head img { width: 96px; height: 96px; flex: none; }
+      .app-head h2 { margin: 0 0 4px; }
+      .app-head p { margin: 0; }
+      .download { margin-bottom: 25px; }
+      .download small { display: block; color: #777; }
+      figure { margin: 0 0 25px; }
+      .screenshot { display: block; width: 100%; height: auto; border: 1px solid #e5e5e5; border-radius: 8px; }
+      figcaption { font-size: 12px; color: #777; margin-top: 8px; }
+      ul.features { padding-left: 20px; }
+      ul.features li { margin-bottom: 8px; }
+      @media (prefers-color-scheme: dark) {
+        .screenshot { border-color: #404040; }
+        figcaption, .download small { color: #aaa; }
+      }
+      @media (max-width: 480px) {
+        .app-head { align-items: flex-start; }
+        .app-head img { width: 72px; height: 72px; }
+      }
+    </style>
+  </head>
+<body>
+<div class="wrapper">
+
+      <header>
+        <h1><b>Benjamin Lockwood</b></h1>
+	      <p class="view"><img class="profile-photo" src="Benjamin Lockwood.jpg" width=275 height=275></p>
+                    <p><strong>Associate Professor</strong><br>
+          Business Economics and Public Policy</p>
+
+        <p><strong>The Wharton School</strong> <br>
+          University of Pennsylvania </p>
+      </header>
+
+   <section>
+
+     <nav>
+       <h3 style="text-align: left">
+       <a href="index.html">About</a> |
+       <a href="research.html">Research</a> |
+       <a href="data.html">Data</a> |
+       <a href="software.html"><b>Software</b></a> |
+       <a href="Lockwood_CV.pdf">CV</a>
+       </h3>
+     </nav>
+
+     <h1>Software</h1>
+
+     <div class="app-head">
+       <img src="software/lectern-icon.png" width="1024" height="1024" alt="Lectern app icon: a white lectern on a blue rounded square">
+       <div>
+         <h2>Lectern: PDF Presenter</h2>
+         <p>A presenter app for macOS, built for Beamer decks.</p>
+       </div>
+     </div>
+
+     <p>Lectern is a presenter app for macOS that I wrote for giving talks from Beamer PDFs. Your laptop shows the current slide, the next one, your notes and a timer; the projector shows only the slide. It knows what a Beamer deck is: overlays count as one frame, sections become a table of contents, and when you recompile the deck it reloads in place at the same frame.</p>
+
+     <p class="download">
+       [<a href="https://github.com/bblockwood/Lectern/releases/download/v0.1.1/Lectern-0.1.1.dmg">Download Lectern 0.1.1 for macOS</a>]
+       <small>Disk image, 2.4 MB. Apple silicon and Intel, macOS 26 (Tahoe) or later. Signed and notarized. Open the disk image and drag Lectern to Applications.</small>
+     </p>
+
+     <figure>
+       <img class="screenshot" src="software/screenshot.png" width="1512" height="950" alt="Lectern's presenter window: the current frame on the left, the next frame and the table of contents on the right, Laser and Draw buttons under the slide, and the frame count, timer and clock along the bottom.">
+       <figcaption>The presenter window during a talk. The audience display shows only the slide.</figcaption>
+     </figure>
+
+     <h3>Features</h3>
+     <ul class="features">
+       <li><b>Presenter view and audience window.</b> Current and next slide, notes, frame count, timer and clock on your screen; the slide alone, full screen, on the projector. With one display the audience view is a floating window, and Rehearse mode runs a talk with no audience view at all.</li>
+       <li><b>Beamer-aware.</b> Overlays are grouped into frames, so the count reads "Frame 7 / 20" rather than a page number, and the overview grid shows frames or builds. Section bookmarks become a clickable table of contents, and an Appendix section marks the end of the main talk.</li>
+       <li><b>Speaker notes from wherever you keep them.</b> A <code>.pdfpc</code> file or <code>\pdfpcnote</code>, <code>pdfcomment</code>, Beamer's "show notes on second screen", a PowerPoint file beside the PDF, or a plain JSON sidecar, with basic Markdown.</li>
+       <li><b>Live reload.</b> Recompile and Lectern swaps in the new PDF at the frame you're on. The audience never sees a blank screen.</li>
+       <li><b>Jumping around.</b> Type a frame number, click a section, an overview thumbnail or a link in the slide, and Back takes you to where you were. Black screen, white screen and Freeze for Q&amp;A.</li>
+       <li><b>Laser pointer and ink.</b> A red pointer and freehand drawing, shown on the audience display as you move.</li>
+       <li><b>Timer.</b> Elapsed time or a countdown, from the pdfpc duration or typed in, green until the time is up and red after.</li>
+       <li><b>Keyboard-first.</b> Every action has a key, presentation clickers work out of the box, and ⌘/ shows the shortcut card.</li>
+     </ul>
+
+     <p>The source is on <a href="https://github.com/bblockwood/Lectern">GitHub</a> under the MIT license, along with <a href="https://github.com/bblockwood/Lectern/releases">all releases</a>. This is an early release, so bug reports are welcome <a href="https://github.com/bblockwood/Lectern/issues">there</a>.</p>
+
+  </section>
+    </div>
+  </body>
+</html>
